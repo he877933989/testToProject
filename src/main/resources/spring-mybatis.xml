@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"  
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:p="http://www.springframework.org/schema/p"  
     xmlns:context="http://www.springframework.org/schema/context"  
     xmlns:mvc="http://www.springframework.org/schema/mvc"  
     xsi:schemaLocation="http://www.springframework.org/schema/beans    
@@ -15,6 +16,7 @@
     
     <bean id="schedulerFactoryBean"
         class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+        
     
 	<!-- 引入配置文件 -->  
     <bean id="propertyConfigurer"  
@@ -39,6 +41,7 @@
         <!-- 获取连接最大等待时间 -->  
         <property name="maxWait" value="${maxWait}"></property>  
     </bean> 
+    
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->  
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">  
         <property name="dataSource" ref="dataSource" />  

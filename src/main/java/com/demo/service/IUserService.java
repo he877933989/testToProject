@@ -6,7 +6,7 @@ import java.util.Map;
 import com.demo.model.User;
 
 public interface IUserService {
-    public User getUserById(int userId);  
-    public List<User> getUserList();
-    public Map<String, User> getUserByCaherToMap();
+    User getUserById(int userId);  
+    List<User> getUserList();
+    Map<String, User> getUserByCaherToMap();
 }
