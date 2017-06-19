@@ -5,7 +5,7 @@ import com.demo.model.User;
 public interface  IUserDao {
 	int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
+    int insert1(User record);
 
     int insertSelective(User record);
 
